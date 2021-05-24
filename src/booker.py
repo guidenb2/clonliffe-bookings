@@ -1,14 +1,14 @@
 import sys
 
-def maximum(tuesday, thursday, saturday, sunday):
-   len_tues = len(tuesday)
-   len_thur = len(thursday)
-   len_sat = len(saturday)
-   len_sun = len(sunday)
-   lst = [len_tues, len_thur, len_sat, len_sun]
+def maximum(l1, l2, l3, l4):
+   len_l1 = len(l1)
+   len_l2 = len(l2)
+   len_l3 = len(l3)
+   len_l4 = len(l4)
+   lst = [len_l1, len_l2, len_l3, len_l4]
    return max(lst)
 
-def sort_into_days(groups):
+def sort_into_times(groups):
    seven = []
    seven_thirty = []
    eight = []
@@ -93,7 +93,7 @@ def main():
       filelines = fd.read()
       lst = filelines.strip().split("#")
       lst = lst[:-1]
-   time1, time2, time3, time4 = sort_into_days(lst)
+   time1, time2, time3, time4 = sort_into_times(lst)
    time1 = boxify(time1)
    time2 = boxify(time2)
    time3 = boxify(time3)
