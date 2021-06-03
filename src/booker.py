@@ -53,6 +53,10 @@ def boxify(lst):
       elif line == "POD 2:":
          s.append("| {:<36} |".format(line))
          s.append("|--------- {:<27} |".format(""))
+      elif line == "POD 3:":
+         s.append("| {:<36} |".format(line))
+         s.append("|--------- {:<27} |".format(""))
+      
       elif line == "FLAG":
          s.append("+--------------------------------------+")
          s.append("  {:<36}  ".format(""))
