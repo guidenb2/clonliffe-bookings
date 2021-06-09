@@ -44,14 +44,10 @@ def sort_into_times(groups):
 def boxify(lst):
    s = []
    for line in lst:
-      if line == "Track":
+      if line == "BOOKER:":
          s.append("+--------------------------------------+")
-         s.append("| {:^36} |".format(line))
-      elif line == "Park":
-         s.append("+--------------------------------------+")
-         s.append("| {:^36} |".format(line))
-      elif line == "Other":
-         s.append("+--------------------------------------+")
+         s.append("| {:<36} |".format(line))
+      elif line == "Park" or line == "Track" or line == "Other":
          s.append("| {:^36} |".format(line))
       elif line == "POD 1:":
          s.append("| {:<36} |".format(line))
