@@ -45,30 +45,30 @@ def boxify(lst):
    s = []
    for line in lst:
       if line == "BOOKER:":
-         s.append("+--------------------------------------+")
-         s.append("| {:<36} |".format(line))
+         s.append("+----------------------------------------+")
+         s.append("| {:<38} |".format(line))
       elif line == "Park" or line == "Track" or line == "Other":
-         s.append("| {:^36} |".format(line))
+         s.append("| {:^38} |".format(line))
       elif line == "POD 1:":
-         s.append("| {:<36} |".format(line))
-         s.append("|--------- {:<27} |".format(""))
+         s.append("| {:<38} |".format(line))
+         s.append("|--------- {:<29} |".format(""))
       elif line == "POD 2:":
-         s.append("| {:<36} |".format(line))
-         s.append("|--------- {:<27} |".format(""))
+         s.append("| {:<38} |".format(line))
+         s.append("|--------- {:<29} |".format(""))
       elif line == "POD 3:":
-         s.append("| {:<36} |".format(line))
-         s.append("|--------- {:<27} |".format(""))
+         s.append("| {:<38} |".format(line))
+         s.append("|--------- {:<29} |".format(""))
       
       elif line == "FLAG":
-         s.append("+--------------------------------------+")
-         s.append("  {:<36}  ".format(""))
+         s.append("+----------------------------------------+")
+         s.append("  {:<38}  ".format(""))
       else:
-         s.append("| {:<36} |".format(line))
+         s.append("| {:<38} |".format(line))
    return s
 
 def printer(time1, time2, time3, time4):
-   print("| {:^37} | {:^38} | {:^38} | {:^37} |".format("7:00", "7:30", "8:00", "8:30"))
-   print("|{}|\n|{:161}|".format("-" * 161, ""))
+   print("| {:^39} | {:^40} | {:^40} | {:^39} |".format("7:00", "7:30", "8:00", "8:30"))
+   print("|{}|\n|{:170}|".format("-" * 170, ""))
    most = maximum(time1, time2, time3, time4)
    line = 0
    flag = 0
@@ -76,19 +76,19 @@ def printer(time1, time2, time3, time4):
       try:
          print(time1[line], end =" ") 
       except:
-         print("  {:<36}  ".format(""), end =" ")
+         print("  {:<38}  ".format(""), end =" ")
       try:
          print(time2[line], end =" ") 
       except:
-         print("  {:<36}  ".format(""), end =" ")
+         print("  {:<38}  ".format(""), end =" ")
       try:
          print(time3[line], end =" ") 
       except:
-         print("  {:<36}  ".format(""), end =" ")
+         print("  {:<38}  ".format(""), end =" ")
       try:
          print(time4[line], end =" ") 
       except:
-         print("  {:<36}  ".format(""), end =" ")
+         print("  {:<38}  ".format(""), end =" ")
       print("")
       line += 1
    
