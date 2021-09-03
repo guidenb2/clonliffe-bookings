@@ -47,7 +47,7 @@ def boxify(lst):
       if line == "BOOKER:":
          s.append("+----------------------------------------+")
          s.append("| {:<38} |".format(line))
-      elif line == "Park" or line == "Track" or line == "Other":
+      elif line == "Santry Park" or line == "Track" or line == "Other":
          s.append("| {:^38} |".format(line))
       elif line == "POD 1:":
          s.append("| {:<38} |".format(line))
